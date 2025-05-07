@@ -13,10 +13,10 @@ using namespace std;
 
 class Junior : public Empleado{
     private:
-        double salario;
+        double salarioBase;
     public:
         Junior(const string& nombre, double salario);
-        double calcularSalario() override;
+        double calcularSalario() const override;
 };
 
 

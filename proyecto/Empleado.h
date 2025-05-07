@@ -19,4 +19,4 @@ public:
     virtual ~Empleado() {}
 };
 
-#endif //JUNIOR_H
+#endif //EMPLEADO_H

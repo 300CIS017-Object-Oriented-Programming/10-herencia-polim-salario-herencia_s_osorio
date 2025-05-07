@@ -1,19 +1,16 @@
 //
 // Created by Santi on 5/6/2025.
 //
-#include "Senior.h"
 #include <iostream>
 #include <string>
-#include <vector>
-#include <map>
+#include "Senior.h"
 using namespace std;
 
 
 
-Senior::Senior(string & nombre, const double salarioBase) : nombre(nombre) salarioBase(salarioBase) {}
+Senior::Senior(const string &nombre, double salarioBase) : Empleado(nombre, salarioBase) {}
 
-
-double Senior::calcularSalario() {
+double Senior::calcularSalario() const{
     double salario = salarioBase*1.20;
     return salario;
 }

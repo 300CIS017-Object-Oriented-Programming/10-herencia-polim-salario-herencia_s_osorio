@@ -9,6 +9,7 @@ using namespace std;
 int main() {
     Sistema sistema;
     sistema.inicializarDatos();
+    cout << "aaaaa" << endl;
     sistema.procesarNomina();
     return 0;
 }

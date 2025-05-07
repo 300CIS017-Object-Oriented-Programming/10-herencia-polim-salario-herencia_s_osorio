@@ -4,14 +4,8 @@
 
 #ifndef SISTEMA_H
 #define SISTEMA_H
-#include <iostream>
-#include <string>
 #include <vector>
 #include "Empleado.h"
-#include "Junior.h"
-#include "Senior.h"
-#include "LiderTecnico.h"
-#include "Tester.h"
 using namespace std;
 
 class Sistema {
@@ -22,7 +16,7 @@ public:
     Sistema();
     void inicializarDatos();
     void procesarNomina();
-    void imprimirEmpleados();
+    void imprimirPagoEmpleados();
     ~Sistema();
 };
 

@@ -9,9 +9,9 @@
 using namespace std;
 
 
-Junior::Junior(const string &nombre, double salarioBase) : nombre(nombre), salario(salarioBase) {}
+Junior::Junior(const string& nombre, double salario) : Empleado(nombre, salario) {}
 
-double Junior::calcularSalario() {
+double Junior::calcularSalario() const{
     double salario = salarioBase * 1;
     return salario;
 }

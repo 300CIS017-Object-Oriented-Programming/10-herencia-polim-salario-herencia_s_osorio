@@ -9,10 +9,10 @@
 using namespace std;
 
 
-LiderTecnico::LiderTecnico(string &nombre, double salarioBase) : nombre(nombre), salarioBase(salarioBase) {}
+LiderTecnico::LiderTecnico(const string& nombre, double salarioBase) : Empleado(nombre, salarioBase) {}
 
 
-double LiderTecnico::calcularSalario() {
+double LiderTecnico::calcularSalario() const{
     double salario = salarioBase*1.25;
     return salario;
 }

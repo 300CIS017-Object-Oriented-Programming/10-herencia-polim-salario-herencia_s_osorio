@@ -16,24 +16,30 @@ Sistema::Sistema() {
 }
 
 void Sistema::inicializarDatos() {
-    empleados.push_back(new Junior("Santiago"));
-    empleados.push_back(new Junior("Luis"));
-    empleados.push_back(new Senior("Jorge"));
-    empleados.push_back(new Senior("Carlos"));
-    empleados.push_back(new LiderTecnico("Luisa"));
-    empleados.push_back(new LiderTecnico("Collazos"));
-    empleados.push_back(new Tester("Guevara"));
-    empleados.push_back(new Tester("Sofia"));
+    empleados.push_back(new Junior("Santiago", 1500));
+    empleados.push_back(new Junior("Luis", 1500));
+    empleados.push_back(new Senior("Jorge", 2000));
+    empleados.push_back(new Senior("Carlos", 2000));
+    empleados.push_back(new LiderTecnico("Luisa", 1200));
+    empleados.push_back(new LiderTecnico("Collazos", 1200));
+    empleados.push_back(new Tester("Guevara", 2000));
+    empleados.push_back(new Tester("Sofia", 2000));
 }
 
 void Sistema::procesarNomina() {
-    for (empleado* empleado : empleados) {
+  double total = 0;
+    for (Empleado* empleado : empleados) {
       total += empleado->calcularSalario();
     }
     cout << "El pago total de la nomina es de" << total << endl;}
 
 void Sistema::imprimirPagoEmpleados() {
-  for (empleado* empleado : empleados) {
+  for (Empleado* empleado : empleados) {
     cout << empleado->calcularSalario() << endl;
   }
+}
+Sistema::~Sistema() {
+    for (Empleado* empleado : empleados) {
+        delete empleado;
+    }
 }

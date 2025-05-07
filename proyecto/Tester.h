@@ -14,10 +14,10 @@ using namespace std;
 
 class Tester : public Empleado {
 private:
-    double salario;
+    double salarioBase;
 public:
     Tester(const string& nombre, double salario);
-    double calcularSalario() override;
+    double calcularSalario() const override;
 
 };
 
