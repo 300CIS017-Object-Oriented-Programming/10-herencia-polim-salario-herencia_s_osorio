@@ -9,23 +9,12 @@
 using namespace std;
 
 
-Senior::Senior() {
-    salarioBase = 10000;
-    salario = calcularSalario();
-}
 
-Senior::Senior(string &nombreEmpleado) {
-    nombre = nombreEmpleado;
-    salarioBase = 10000;
-    salario = valorAPagar();
-}
+Senior::Senior(string & nombre, const double salarioBase) : nombre(nombre) salarioBase(salarioBase) {}
+
 
 double Senior::calcularSalario() {
     double salario = salarioBase*1.20;
-    return salario;
-}
-
-double Senior::getSalario() {
     return salario;
 }
 

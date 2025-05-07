@@ -17,10 +17,8 @@ class Senior : public Empleado{
     private:
         double salario;
     public:
-        Senior();
-        Senior(double salario);
+        Senior(const string& nombre, double salario);
         double calcularSalario() override;
-        double getSalario() override;
 };
 
 

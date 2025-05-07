@@ -8,24 +8,12 @@
 #include "LiderTecnico.h"
 using namespace std;
 
-LiderTecnico::LiderTecnico() {
-    salarioBase = 10000;
-    salario = valorAPagar();
-}
 
-LiderTecnico::LiderTecnico(string &nombreEmpleado, string &id) {
-    nombre = nombreEmpleado;
-    salarioBase = 10000;
-    salario = valorAPagar();
-}
+LiderTecnico::LiderTecnico(string &nombre, double salarioBase) : nombre(nombre), salarioBase(salarioBase) {}
 
 
 double LiderTecnico::calcularSalario() {
     double salario = salarioBase*1.25;
-    return salario;
-}
-
-double LiderTecnico::getSalario() {
     return salario;
 }
 

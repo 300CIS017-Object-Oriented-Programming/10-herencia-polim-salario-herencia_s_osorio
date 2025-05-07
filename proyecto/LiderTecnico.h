@@ -17,10 +17,8 @@ class LiderTecnico : public Empleado {
     private:
         double salario;
     public:
-        LiderTecnico();
-        LiderTecnico(double salario);
+        LiderTecnico(const string& nombre, double salario);
         double calcularSalario() override;
-        double getSalario() override;
 
 };
 

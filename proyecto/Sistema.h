@@ -4,23 +4,26 @@
 
 #ifndef SISTEMA_H
 #define SISTEMA_H
+#include <iostream>
+#include <string>
+#include <vector>
 #include "Empleado.h"
 #include "Junior.h"
 #include "Senior.h"
 #include "LiderTecnico.h"
 #include "Tester.h"
-#include <iostream>
-#include <string>
-#include <vector>
-#include <map>
 using namespace std;
 
 class Sistema {
 private:
-    vector<Empleado*>& empleados;
+    vector<Empleado*> empleados;
+
 public:
-    sistema();
-    void inicializarDatos(vector<Empleado*>& empleados);
-    void procesarNomina(vector<Empleado*>& empleados);
+    Sistema();
+    void inicializarDatos();
+    void procesarNomina();
     void imprimirEmpleados();
+    ~Sistema();
+};
+
 #endif //SISTEMA_H

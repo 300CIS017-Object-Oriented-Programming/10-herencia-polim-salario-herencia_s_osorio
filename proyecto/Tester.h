@@ -16,10 +16,8 @@ class Tester : public Empleado {
 private:
     double salario;
 public:
-    Tester();
-    Tester(double salario);
+    Tester(const string& nombre, double salario);
     double calcularSalario() override;
-    double getSalario() override;
 
 };
 

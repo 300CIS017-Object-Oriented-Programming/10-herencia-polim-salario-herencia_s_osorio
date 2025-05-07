@@ -15,22 +15,25 @@ using namespace std;
 Sistema::Sistema() {
 }
 
-void Sistema::inicializarDatos(vector<Empleado*>& empleados) {
-    empleados.push_back(new DesarrolladorJunior("Santiago"));
-    empleados.push_back(new DesarrolladorJunior("Luis"));
-    empleados.push_back(new DesarrolladorSenior("Jorge"));
-    empleados.push_back(new DesarrolladorSenior("Carlos"));
+void Sistema::inicializarDatos() {
+    empleados.push_back(new Junior("Santiago"));
+    empleados.push_back(new Junior("Luis"));
+    empleados.push_back(new Senior("Jorge"));
+    empleados.push_back(new Senior("Carlos"));
     empleados.push_back(new LiderTecnico("Luisa"));
     empleados.push_back(new LiderTecnico("Collazos"));
     empleados.push_back(new Tester("Guevara"));
     empleados.push_back(new Tester("Sofia"));
 }
 
-void Sistema::procesarNomina(const std::vector<Empleado*>& empleados) {
-    double total = 0;
-    std::cout << "=== Procesando Nómina ===\n\n";
-    for (int i = 0; i < empleados.size(); i++) {
-        total += empleados[i]->calcularSalario();
+void Sistema::procesarNomina() {
+    for (empleado* empleado : empleados) {
+      total += empleado->calcularSalario();
     }
-    std::cout << "Total a pagar: $" << total << "\n";
+    cout << "El pago total de la nomina es de" << total << endl;}
+
+void Sistema::imprimirPagoEmpleados() {
+  for (empleado* empleado : empleados) {
+    cout << empleado->calcularSalario() << endl;
+  }
 }

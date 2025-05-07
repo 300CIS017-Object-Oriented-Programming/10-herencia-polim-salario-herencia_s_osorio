@@ -2,24 +2,21 @@
 // Created by Santi on 5/6/2025.
 //
 
-#ifndef JUNIOR_H
-#define JUNIOR_H
+#ifndef EMPLEADO_H
+#define EMPLEADO_H
 
 #include <iostream>
 #include <string>
-#include <vector>
-#include <map>
 using namespace std;
 
-class Empleado{
+class Empleado {
 protected:
     double salarioBase;
     string nombre;
 public:
-Empleado();
-Empleado(int salario, string nombre);
-virtual double calcularSalario();
-virtual void getInfo();
-virtual ~Empleado() {}
+    Empleado(const string& nombre, double salarioBase);
+    virtual double calcularSalario() const = 0;
+    virtual ~Empleado() {}
+};
 
 #endif //JUNIOR_H

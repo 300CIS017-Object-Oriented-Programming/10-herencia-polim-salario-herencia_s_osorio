@@ -8,21 +8,12 @@
 #include "Junior.h"
 using namespace std;
 
-Junior::Junior() {
-    salarioBase = 10000;
-    salario = valorAPagar();
-}
 
-Junior::Junior(string &nombreEmpleado) {
-    nombre = nombreEmpleado;
-    salarioBase = 10000;
-}
+Junior::Junior(const string &nombre, double salarioBase) : nombre(nombre), salario(salarioBase) {}
 
 double Junior::calcularSalario() {
-    double salario = salarioBase;
+    double salario = salarioBase * 1;
     return salario;
 }
 
-double Junior::getSalario() {
-    return salario;
-}
+

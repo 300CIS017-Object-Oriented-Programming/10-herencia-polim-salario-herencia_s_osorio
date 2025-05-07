@@ -1,17 +1,14 @@
 //
 // Created by Santi on 5/6/2025.
 //
-#include "Sistema.h"
 #include <iostream>
 #include <string>
-#include <vector>
-#include <map>
+#include "Sistema.h"
 using namespace std;
 
 int main() {
-    vector<Empleado*> empleados;
-    inicializarDatos(empleados);
-    procesarNomina(empleados);
-    liberarMemoria(empleados);
+    Sistema sistema;
+    sistema.inicializarDatos();
+    sistema.procesarNomina();
     return 0;
 }

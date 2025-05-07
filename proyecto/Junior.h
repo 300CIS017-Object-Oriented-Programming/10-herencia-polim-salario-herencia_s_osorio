@@ -15,10 +15,8 @@ class Junior : public Empleado{
     private:
         double salario;
     public:
-        Junior();
-        Junior(double salario);
+        Junior(const string& nombre, double salario);
         double calcularSalario() override;
-        double getSalario() override;
 };
 
 

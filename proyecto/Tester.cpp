@@ -10,25 +10,11 @@
 using namespace std;
 
 
-Tester::Tester() {
-    salarioBase = 10000;
-    salario = calcularSalario();
-}
-
-Tester::Tester(string &nombreEmpleado) {
-    nombre = nombreEmpleado;
-    salarioBase = 10000;
-    salario = calcularSalario();
-}
+Tester::Tester(string &nombre, double salarioBase) : nombre(nombre), salarioBase(salarioBase) {}
 
 
 double Tester::calcularSalario() {
-    double totalExtra = salarioBase*bono;
+    double totalExtra = salarioBase* 1.05;
     salario = salarioBase + totalExtra;
-    return salario;
-}
-
-
-double Tester::getSalario() {
     return salario;
 }
